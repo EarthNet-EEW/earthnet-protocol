@@ -4,6 +4,10 @@
 //! so picks agree across implementations. Reused by the node and, via
 //! flutter_rust_bridge, by the mobile on-device detector (v1.1). Deterministic
 //! by design — no ML in the alert path (DESIGN guardrail).
+//!
+//! PARITY TODO: the Python adapter now band-passes 2–8 Hz before STA/LTA (it
+//! halved false positives in backtesting). This Rust detector is still
+//! unfiltered; add the same band-pass before using it for on-device detection.
 
 /// Short-term-average window (seconds). Keep in sync with the Python adapter.
 pub const STA_SECONDS: f64 = 0.5;
