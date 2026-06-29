@@ -9,6 +9,7 @@ pub mod proto {
     include!(concat!(env!("OUT_DIR"), "/earthnet.v1.rs"));
 }
 
+pub mod detect;
 pub mod sign;
 
 pub use proto::{ConfirmedEvent, EvidenceKind, Location, Observation, SourceType};
